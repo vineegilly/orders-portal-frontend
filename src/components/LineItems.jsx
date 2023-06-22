@@ -62,8 +62,8 @@ const LineItems = ({ orderItems }) => {
             <TableRow>
               <TableCell>Line Item ID</TableCell>
               <TableCell>Item</TableCell>
-              <TableCell>Profit</TableCell>
-              <TableCell>Sales</TableCell>
+              <TableCell>Profit($)</TableCell>
+              <TableCell>Sales($)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

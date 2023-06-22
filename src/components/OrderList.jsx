@@ -60,7 +60,7 @@ const OrderList = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box display="flex" p={1}>
+      <Box display="flex" p={2}>
         <TableContainer component={Paper}>
           <Table className={classes.table} aria-label="collapsible table">
             <TableHead>
@@ -73,8 +73,8 @@ const OrderList = () => {
                 <TableCell>Product name</TableCell>
                 <TableCell>Order date</TableCell>
                 <TableCell>Region</TableCell>
-                <TableCell>Profit</TableCell>
-                <TableCell>Sales</TableCell>
+                <TableCell>Profit($)</TableCell>
+                <TableCell>Sales($)</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
