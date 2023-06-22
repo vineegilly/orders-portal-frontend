@@ -100,7 +100,7 @@ const OrderList = () => {
                     <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
                       <Collapse in={open[order.id]} timeout="auto" unmountOnExit>
                         <Grid container spacing={2}>
-                          <Grid item xs={10}>
+                          <Grid item xs={12}>
                             <LineItemsCard orderOpened={order}/>
                           </Grid>
                         </Grid>
