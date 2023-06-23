@@ -19,6 +19,9 @@ import LineItemsCard from './LineItemsCard'
 import localData from '../resource/OrderList.json'
 
 const useStyles = makeStyles({
+  tablecontainer: {
+    marginTop:'20px',
+  },
   table: {
     minWidth: 650,
     "& .MuiTableCell-head": {
@@ -60,8 +63,7 @@ const OrderList = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box display="flex" p={2}>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} className={classes.tablecontainer}>
           <Table className={classes.table} aria-label="collapsible table">
             <TableHead>
               <TableRow>
@@ -97,13 +99,11 @@ const OrderList = () => {
                     <TableCell>{order.sales}</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
+                    <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={12}>
                       <Collapse in={open[order.id]} timeout="auto" unmountOnExit>
-                        <Grid container spacing={2}>
-                          <Grid item xs={12}>
+                        <Box spacing={2}>
                             <LineItemsCard orderOpened={order}/>
-                          </Grid>
-                        </Grid>
+                        </Box>
                       </Collapse>
                     </TableCell>
                   </TableRow>
@@ -112,7 +112,6 @@ const OrderList = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </Box>
     </Container>
   );
 }
